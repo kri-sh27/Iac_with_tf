@@ -14,7 +14,7 @@ resource "docker_image" "zomatoapp" {
 }
 
 resource "docker_container" "zomatoapp_container" {
-  image = docker_image.zomatoapp.image_id   # or docker_image.nginx.name
+  image = docker_image.zomatoapp.image_id  
   name  = "my-zomatoapp-container"
   ports {
     internal = 3000
